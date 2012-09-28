@@ -1,4 +1,8 @@
 SenSatiOnal::Application.routes.draw do
+  get "bookmarks/add"
+
+  get "bookmarks/view"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
