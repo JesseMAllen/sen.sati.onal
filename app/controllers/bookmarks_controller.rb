@@ -4,8 +4,4 @@ class BookmarksController < ApplicationController
 
   def view
   end
-  
-  def home
-  end
-  
 end
