@@ -1,4 +1,6 @@
 SenSatiOnal::Application.routes.draw do
+  get "static_pages/home"
+
   get "bookmarks/add"
   get "bookmarks/view"
   get "bookmarks/home"
