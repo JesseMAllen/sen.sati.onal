@@ -1,3 +1,12 @@
 <% provide(:title, 'View Bookmarks') %>
 
 <h1>View Bookmarks</h1>
+
+<div>
+	<% if @bookmarks %>
+		<h3>Bookmarks (<%= :bookmarks.count %>)</h3>
+		<ol>
+			<% render :bookmarks %>
+		</ol>
+	<% end %>
+</div>

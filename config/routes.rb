@@ -1,6 +1,5 @@
 SenSatiOnal::Application.routes.draw do
-  get "bookmarks/add"
-  get "bookmarks/view"
+  resources :bookmarks
   
   root to: 'static_pages#home'
 

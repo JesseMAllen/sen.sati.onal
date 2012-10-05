@@ -12,4 +12,7 @@
 
 class Bookmark < ActiveRecord::Base
   attr_accessible :dateSaved, :name, :url
+  
+  validates :name, presence: true, length: { maximum: 99 }
+  validates :url, presence: true, length: { minimum: 10 }
 end
