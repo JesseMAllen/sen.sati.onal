@@ -14,13 +14,14 @@ require 'spec_helper'
 
 describe Bookmark do
   
-  before { @bookmark = Bookmark.new(name: "daring fireball", url: "daringfireball.net", dateSaved: Date.today) }
+  before do
+     @bookmark = Bookmark.new(name: "daring fireball", url: "daringfireball.net") 
+   end
   
   subject { @bookmark }
   
   it { should respond_to(:name) }
   it { should respond_to(:url) }
-  it { should respond_to(:dateSaved) }
   
   describe "when name is not present" do
     before { @bookmark.name = " " }
@@ -29,6 +30,16 @@ describe Bookmark do
   
   describe "when name is too long" do
     before { @bookmark.name = "a" * 100 }
+    it { should_not be_valid }
+  end
+  
+  describe "when url is not present" do
+    before { @bookmark.url = " " }
+    it { should_not be_valid }
+  end
+  
+  describe "when url is too short" do
+    before { @bookmark.url = "a" * 9 }
     it { should_not be_valid }
   end
 end

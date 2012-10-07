@@ -3,6 +3,6 @@ SenSatiOnal::Application.routes.draw do
   
   root to: 'static_pages#home'
 
-  match '/create', to: 'bookmarks#add'
-  match '/view', to:'bookmarks#view'
+  match '/create', to: 'bookmarks#new'
+  match '/show', to:'bookmarks#show'
 end

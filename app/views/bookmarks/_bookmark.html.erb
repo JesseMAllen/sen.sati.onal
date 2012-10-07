@@ -1,0 +1,8 @@
+<li>
+  <span class="content"><%= bookmark.name %></span>
+  <span class="content"><%= bookmark.url %></span>
+	
+  <span class="timestamp">
+    Posted <%= time_ago_in_words(bookmark.created_at) %> ago.
+  </span>
+</li>

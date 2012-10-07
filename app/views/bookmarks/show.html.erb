@@ -1,0 +1,10 @@
+<% provide(:title, 'Bookmarks') %>
+
+<h1 class>View Bookmarks</h1>
+
+<div class="span8">
+    <% if @bookmarks.count > 0 %>
+      <ol >
+        <%= render @bookmarks %>
+      </ol>
+    <% end %>

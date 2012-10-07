@@ -1,0 +1,20 @@
+<% provide(:title, 'Create') %>
+
+<h1>Create a Bookmark
+
+<div>
+	<div>
+		<%= form_for(@bookmark) do |mark| %>
+
+			<%= mark.label :name %>
+			<%= mark.text_field :name %>
+
+			<%= mark.label :url %>
+			<%= mark.text_field :url %>
+			
+			<br />
+
+			<%= mark.submit "Add Bookmark", class: "btn-btn-large btn-primary" %>
+		<% end %>
+	</div>
+</div>

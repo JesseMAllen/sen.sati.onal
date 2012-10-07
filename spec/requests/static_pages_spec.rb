@@ -14,10 +14,10 @@ describe "StaticPages" do
   
   it "should have the right links on the layout" do
     visit root_path
-    click_link "Add"
+    click_link "Add Bookmark"
     page.should have_selector 'title', text: full_title('Create')
-    click_link "View"
-    page.should have_selector 'title', text: full_title('View Bookmarks')
+    click_link "View Bookmarks"
+    page.should have_selector 'title', text: full_title('Bookmarks')
     click_link "Home"
     click_link "sen.sati.onal"
     page.should have_selector 'title', text: full_title('')
